@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+button.btn {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 8px 15px;
+  background-color: transparent;
+
+  &.btn-white {
+    color: $white;
+    border: 1px solid $white;
+  }
+
+  &.btn-white-full {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $white;
+  }
+
+  &.btn-black {
+    color: $black;
+    border: 1px solid $black;
+  }
+
+  &.btn-black-full {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+  }
+
+  &.btn-wide {
+    width: 100%;
+    border-width: 2px;
+    padding: 13px;
+    font-weight: 700;
+  }
+
+}
+

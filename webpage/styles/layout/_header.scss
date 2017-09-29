@@ -1,0 +1,160 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header.header {
+  padding-top: 40px;
+
+  nav.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #navbar {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+
+      &.open {
+        background: $black;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+      @include media-breakpoint-up('md') {
+        display: flex;
+
+        &.open {
+          width: auto;
+          height: auto;
+          background: transparent;
+          position: relative;
+        }
+
+      }
+
+      .navbar-nav {
+        align-items: center;
+
+        @include media-breakpoint-up('md') {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: row;
+        }
+
+        .nav-item {
+          margin-left: 15px;
+          margin-right: 15px;
+          color: $white;
+        }
+      }
+      }
+
+
+    .navbar-brand {
+      img {
+        max-width: 100px;
+      }
+    }
+
+
+  }
+
+  .hamburger {
+    z-index: 9999;
+    font: inherit;
+    display: inline-block;
+    overflow: visible;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transition-property: opacity,filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+    display: block;
+
+    &.is-active {
+      position: fixed;
+      top: 40px;
+      right: 20px;
+    }
+
+    @include media-breakpoint-up('md') {
+      display: none;
+    }
+  }
+
+  .hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+  }
+
+  .hamburger .hamburger-inner, .hamburger .hamburger-inner:after, .hamburger .hamburger-inner:before {
+    background-color: $white;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    transition-property: transform;
+    border-radius: 10px;
+
+  }
+
+  .hamburger-inner {
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-duration: .22s;
+  }
+
+  .hamburger .hamburger-inner:before {
+    top: -8px;
+    transition: top .1s ease-in .25s,opacity .1s ease-in;
+  }
+
+  .hamburger .hamburger-inner:after {
+    bottom: -8px;
+    transition: bottom .1s ease-in .25s,transform .22s cubic-bezier(.55,.055,.675,.19);
+  }
+
+  .hamburger-inner:after, .hamburger-inner:before {
+    display: block;
+    content: "";
+  }
+
+  .hamburger.is-active .hamburger-inner {
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: rotate(-225deg);
+  }
+
+  .hamburger.is-active .hamburger-inner:before {
+    top: 0;
+    transition: top .1s ease-out,opacity .1s ease-out .12s;
+    opacity: 0;
+  }
+
+  .hamburger.is-active .hamburger-inner:after {
+    bottom: 0;
+    transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+    transform: rotate(90deg);
+  }
+
+
+
+
+}

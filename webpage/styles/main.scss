@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/animations',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  '../node_modules/bootstrap/scss/bootstrap.scss',
+  url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900'),
+  url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'),
+  '../node_modules/slick-carousel/slick/slick.css',
+  '../node_modules/slick-carousel/slick/slick-theme.css',
+  '../node_modules/spinkit/css/spinkit.css';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Section-specific styles
+@import
+  'sections/coffee',
+  'sections/contact',
+  'sections/laptop',
+  'sections/mobile',
+  'sections/projects',
+  'sections/team',
+  'sections/testimonials',
+  'sections/hero';

@@ -1,0 +1,38 @@
+.mobile {
+  background-color: $pink;
+  padding-top: 50px;
+
+  @include media-breakpoint-up('sm') {
+    padding-top: 0;
+  }
+
+
+  .mobile-image {
+    img {
+      max-height: 800px;
+      margin:  0 auto -70px;
+      display: block;
+
+      @include media-breakpoint-up(md) {
+        margin: -70px auto;
+      }
+    }
+  }
+
+  .mobile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+    padding-bottom: 30px;
+
+    @include media-breakpoint-up('md') {
+      height: 600px;
+    }
+
+    h1 {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+  }
+}

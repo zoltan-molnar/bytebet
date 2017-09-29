@@ -1,0 +1,118 @@
+.team {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  @include media-breakpoint-up('md') {
+    padding-bottom: 150px;
+  }
+
+  h1 {
+    padding-bottom: 50px;
+  }
+
+  .team-members-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    .team-member {
+      position: relative;
+      padding: 5px;
+      flex-basis: 50%;
+
+      @include media-breakpoint-up(sm){
+        flex-basis: 33%;
+      }
+
+      @include on-event() {
+        .team-member-overlay{
+          opacity: 1;
+        }
+      }
+
+      img {
+        border-radius: 8px;
+      }
+
+      .team-member-overlay {
+        width: 100%;
+        height: 75px;
+
+        @include media-breakpoint-up("md") {
+          opacity: 0;
+          background-color: rgba($brand-color, 0.5);
+          position: absolute;
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+          top: 5px;
+          left: 5px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          -webkit-transition: opacity 0.25s linear;
+          -moz-transition: opacity 0.25s linear;
+          -ms-transition: opacity 0.25s linear;
+          -o-transition: opacity 0.25s linear;
+          transition: opacity 0.25s linear;
+        }
+
+        p {
+          text-align: center;
+          margin-bottom: 0;
+
+          @include media-breakpoint-up("md") {
+            color: $white;
+            font-size: 1.5rem;
+          }
+        }
+
+        h2 {
+          text-align: center;
+          color: $pink;
+          font-size: 1.2rem;
+
+          @include media-breakpoint-up("md") {
+            font-size: 2.0rem;
+          }
+        }
+
+        .team-social {
+          max-width: 120px;
+          margin: 0 auto 0;
+
+          ul {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            li {
+              padding: 0 4px;
+              a {
+                color: $white;
+                width: 30px;
+                height: 30px;
+                border: 1px solid $white;
+                display: block;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 50%;
+
+                @include on-event() {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}

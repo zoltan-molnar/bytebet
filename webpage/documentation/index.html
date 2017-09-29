@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="language-command-line">
+            <div class="sidebar">
+                <div class="header">
+                    <a href="https://digitalaweso.me">
+                        <img src="images/logo.svg">
+                    </a>
+                </div>
+
+                <ul class="navigation">
+                    <li>
+                        <a href="#introduction">
+                            <img src="images/navigation.svg">
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#getting-started">
+                            <img src="images/package.svg">
+                            <span>Getting Started</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#editing">
+                            <img src="images/scissors.svg">
+                            <span>Editing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#deployment">
+                            <img src="images/cpu.svg">
+                            <span>Deployment</span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- .sidebar -->
+
+        <div class="main">
+                <header>
+                    <h1 class="title">Trumpet Premium HTML Template</h1>
+                    <button class="issue-link btn">
+                        <a href="https://github.com/benzomedia/trumpet-issues/issues" target="_blank">Have an issue?</a>
+                    </button>
+                </header>
+            <div class="main-content">
+                <div id="introduction" class="content-section">
+                    <h2>Intorduction</h2>
+                    <p> Trumpet is a clean, responsive, neatly designed premium HTML template, built by
+                        with developers in mind. It was built with the purpose of expediting
+                        the build process of a new website, and a lot of thought had been put into the
+                        structure of each section of the website.
+                    </p>
+                </div>
+                <div id="getting-started" class="content-section">
+                    <h2>Getting Started</h2>
+                    <h3>Local Deployment</h3>
+                    <h4>Requirements</h4>
+                    <p>The best way to deploy Trumpet is to build it on a local machine first,
+                        and then copy the neccessary files over to a server. In order to do that
+                        you will need Node and NPM installed on your computer. You can check
+                        to see if it is installed by typing in your console:</p>
+                        <pre><code>npm -v
+5.3.0</code></pre>
+                <p>
+                    If you do not get a version number it means you do not have NPM installed. You
+                    can follow the installation instructions <a href="https://nodejs.org/en/" target="_blank">here</a>.
+                </p>
+                    <p>You will also need to have Webpack installed on your computer <strong>globally</strong>.
+                        Once you have npm installed, you can install webpack by typing in in your console:
+                    </p>
+                <pre><code>npm install -g webpack</code></pre>
+                    <h4>Installation</h4>
+                    <p>When you complete your purchase you are prompted to download a <code>trumpet.zip</code>
+                        file. Unzip it and move the folder to your preffered loaction. Open your
+                        console and navigate to the directory of the template like so:
+                    </p>
+                    <pre><code>cd path/to/trumpet</code></pre>
+                    <p>Install the npm packages by typing the next command:</p>
+                    <pre><code>npm install</code></pre>
+                    <p>Once the packages have finished installing you will need to compile the JS and SCSS files.
+                        You can easily do this by typing:
+                    </p>
+                    <pre><code>webpack</code></pre>
+                    <p>You will be able to see that two new files have been added to the <code>public</code>
+                        directory: <code>bundle.js</code> and <code>styles.min.css</code>.
+                    </p>
+                    <p>In order to view the website simply open on the file <code>trumpet/public/index.html</code> to open it in your
+                        favorite browser.
+                    </p>
+
+                </div>
+                <div id="editing" class="content-section">
+                    <h2>Editing</h2>
+                    <h3>Sass</h3>
+                    <p>Trumpet was built in order to house different types of content. In order to
+                    maintain the tempalte maticulous design, make sure that you copy the classes of
+                    each element you subtitute. There may be some cases where you will need to tweak
+                        the css of the website. Trumpet uses Sass to preprocess the css files of the website.
+                        If you are unfamiliar with Sass, you can find more about it <a href="http://sass-lang.com/" target="_blank">here</a>.
+                        In order for the browser to read the new styles the SCSS files need to be compiled into
+                        regular CSS. You can easily achieve this by navigating in your console to the directory of
+                        Trumpet and typing:
+                    </p>
+                    <pre><code>webpack --watch</code></pre>
+                    <p>Leave your console open and continue editing the SCSS files. Webpack will automatically recompile
+                    the files whenever you make a change.
+                    </p>
+                    <h3>Projects Section</h3>
+                    <p>
+                        The projects section was built with the use of a plugin called <a href="https://isotope.metafizzy.co/" target="_blank">Isotope.</a>
+                        Each button has a property called "data-filter" that sets the class this button will present.
+                        You can find out more in the isotope website.
+                    </p>
+                    <h3>Testimonials Section</h3>
+                    <p>
+                        The projects section was built with the use of a plugin called <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick.</a>
+                        When adding more testimonials, make sure to copy the classes exactly for the plugin to work.
+                    </p>
+                    <h3>Setting Up Email</h3>
+                    <p>
+                        In order for the form to send you emails from visitors on the website, the site must be deployed
+                        to a PHP server. Before you deploy the website make sure to enter your email in the file
+                        <code>public/mail/index.php</code> at the top of the file like so:
+                    </p>
+                    <pre><code>//Enter your email ↓
+$to = 'youremail@gmail.com';</code></pre>
+                    <h3>Setting up the Map</h3>
+                    <p>
+                        In order to set up the map in the template you need to do two things:</p>
+                    <ol>
+                        <li>
+                            Enter your API key which you get from google by following <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">these instructions</a>.
+                        </li>
+                        <li>
+                            Adding the longtitude and latitude values of the address you want shown on the map.
+                        </li>
+                    </ol>
+                    <h4>API Key</h4>
+                    <p> Once you have the API key, go to <code>pubic/index.html</code> and scroll all the way to the bottom of the page.
+                        Find the link to the Google Maps script and enter your API key like so:
+                    </p>
+                    <pre><code>&lt;script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_GOES_HERE"&gt;&lt;/script&gt;</code></pre>
+                    <h4>Map Address</h4>
+                    <p>
+                        In order to get the longtitude and latitude values of your address you can use various online generators like
+                        <a href="http://www.latlong.net/" target="_blank">this one</a>.
+                        After you have the values go to <code>js/script.js</code>. At the top of the file you will find
+                        a place to enter your values: <code>lat</code> for latitude and <code>lng</code> for longtitude like so:
+                    </p>
+                    <pre><code>var office = {lat: 40.748541, lng: -73.985758};</code></pre>
+                </div>
+                <div id="deployment" class="content-section">
+                    <h2>Deployment</h2>
+                    <p>Deployment of Trumpet is extremely easy. Once you have built the website locally, set your details, and
+                    edited the content to your liking, simply copy the <code>public</code> directory's contents to your website's
+                    folder on your hosting service via FTP.</p>
+                    <p>We, at Digital Awesome, offer a deployment service with added cost. If you are
+                    interested, feel free to contact us at: <a href="mailto:hello@digitalaweso.me">hello@digitalaweso.me</a>.</p>
+                </div>
+                <footer>
+                    <p>&copy; 2017 Digital Awesome</p>
+                </footer>
+            </div><!-- .main-content -->
+        </div>
+<script src="js/prism.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

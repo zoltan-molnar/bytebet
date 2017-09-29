@@ -1,0 +1,47 @@
+.projects {
+  padding-top: 160px;
+  padding-bottom: 100px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 370px;
+  }
+
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .filter-button-group {
+    max-width: 650px;
+    margin: 0 auto 50px;
+
+    button {
+      width: 100%;
+      margin-bottom: 5px;
+
+      &.active {
+        @extend .btn-black-full;
+      }
+
+      @include on-event() {
+        outline: none;
+        box-shadow: none;
+      }
+
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .element-item {
+      width: 33%;
+      padding: 3px;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+  }
+}

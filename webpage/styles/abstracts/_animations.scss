@@ -1,0 +1,39 @@
+
+
+
+.roll-out {
+  animation-name: appear;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+}
+
+.roll-in {
+  animation-name: disappear;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+}
+
+
+
+
+@keyframes appear {
+  0%   {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes disappear {
+  0%   {
+    top: 0;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
