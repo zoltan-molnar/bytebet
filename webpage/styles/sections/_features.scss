@@ -1,0 +1,14 @@
+.features {  
+  padding-bottom: 50px;
+  padding-top: 50px;
+  
+  .features-item {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include media-breakpoint-up(md){
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

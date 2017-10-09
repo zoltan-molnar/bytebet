@@ -1,40 +1,45 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
+// This file contains all styles related to the input component.
 // -----------------------------------------------------------------------------
 
-button.btn, a.btn, input[type=submit].btn {
+input.input {
   outline: none;
-  cursor: pointer;
   border-radius: 30px;
-  padding: 13px 30px;
+  padding: 8px 15px;
   background-color: transparent;
-  border-width: 2px;
-  font-weight: 700;
+  
+  @include media-breakpoint-up(sm) {
+    width: 350px;
+  }
+  width: 200px;
 
-  &.btn-white {
+  &.input-white {
     color: $white;
     border: 1px solid $white;
   }
 
-  &.btn-white-full {
+  &.input-white-full {
     background-color: $white;
     color: $black;
     border: 1px solid $white;
   }
 
-  &.btn-black {
+  &.input-black {
     color: $black;
     border: 1px solid $black;
   }
 
-  &.btn-black-full {
+  &.input-black-full {
     background-color: $black;
     color: $white;
     border: 1px solid $black;
   }
-
-  &.btn-wide {
+  
+  &.input-wide {
     width: 100%;
+    border-width: 2px;
+    padding: 13px;
+    font-weight: 700;
   }
 
 }

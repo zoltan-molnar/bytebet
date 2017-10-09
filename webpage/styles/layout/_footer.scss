@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 .footer {
   background-color: $black;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 30px;
   color: $white;
 
@@ -46,11 +46,14 @@
     max-width: 290px;
     margin: 0 auto 30px;
     font-size: 0.9rem;
+    a {
+      color: $white;
+    }
   }
 
   .footer-social {
     max-width: 120px;
-    margin: 0 auto 60px;
+    margin: 0 auto 30px;
 
     ul {
       padding: 0;

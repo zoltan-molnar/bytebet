@@ -4,354 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="/images/favicon.png">
-    <title>Trumpet</title>
-    <link href="/styles.min.css" rel="stylesheet">
+    <title>ByteBet</title>
+    <link href="/styles.min.css?version=3" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107703916-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-107703916-1');
+    </script>
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:649403,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <script type="text/javascript">
+    function clearForm() {
+        element = document.getElementById('email');
+        if (element.value === 'Email address') {
+            element.value = '';
+        }
+    }
+    function addPlaceholder() {
+        element = document.getElementById('email');
+        if (!element.value) {
+            element.value = 'Email address';
+        }
+    }
+    </script>
 </head>
 <body>
-<div class="hero-bg">
+<div class="bytebet-bg">
     <header class="header">
         <div class="container">
             <nav class="navigation">
                 <a class="navbar-brand" href="/"><img src="/images/byte_bet_logo.png"></a>
-
                 <div class="hamburger">
                     <div class="hamburger-box">
                         <div class="hamburger-inner">
                         </div>
                     </div>
                 </div>
-
-
                 <div id="navbar">
-
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#projects">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#feature">Whitepaper</a>
-                        <a class="nav-item nav-link" href="#team">Crowdsale</a>
+                        <a class="nav-item nav-link" href="#about">About</a>
                         <a class="nav-item nav-link" href="#team">Team</a>
-                        <a class="nav-item nav-link" href="#team">Contact</a>
+                        <a class="nav-item nav-link" href="#roadmap">Whitepaper</a>
+                        <a class="nav-item nav-link" href="#roadmap">Crowdsale</a>
                     </div>
-
                 </div>
             </nav>
-        </div><!-- .container -->
+        </div>
     </header>
-    <div class="hero">
-        <div class="hero-content text-center">
+    <div class="bytebet">
+        <div class="bytebet-content text-center">
             <div class="container">
-                <h1>Any bet without house edge on Ethereum</h1>
+                <h1>Peer-to-peer, community-driven betting platform on Ethereum</h1>
+                <p>
+                    <a class="btn btn-white btn-wide" href="#roadmap">
+                        Subscribe to get notified about the project
+                    </a>
+                </p>
             </div>
         </div>
-    </div><!-- .hero -->
+    </div>
 </div>
-<div class="coffee">
-    <img id="coffee-mug" src="/images/coffee.png">
-    <img id="mouse" src="/images/mouse.png">
+<div class="what-is" id="about">
     <div class="container">
-        <div class="coffee-text">
-            <h1 class="text-center">Good for business</h1>
-            <p class="text-center">Make your website stand out with the power of Trumpet.</p>
+        <div class="what-is-text">
+            <h1 class="text-center">What is ByteBet?</h1>
+            <p class="text-center">ByteBet is a peer-to-peer, community driven betting platform that allows players anywhere from the world to create bets and play against each other. By using blockchain technology games can’t be manipulated and fees can be significantly lowered leaving more money at players.</p>
         </div>
-        <div class="coffee-buttons">
-            <div class="row">
-                <div class="col-sm-6">
-                    <button class="btn btn-black-full btn-wide">
-                        Talk to us
-                    </button>
-                </div>
-                <div class="col-sm-6">
-                    <button class="btn btn-black btn-wide">
-                        Learn More
-                    </button>
-                </div>
-            </div>
+        <div class="what-is-image">
+            <img class="img-fluid" src="/images/process.png">
         </div>
-        <div class="coffee-image">
-            <img class="img-fluid" src="/images/macbook.png">
-        </div>
-    </div><!-- .container -->
-</div><!-- .coffee -->
-<div class="projects">
+    </div>
+</div>
+<div class="features">
     <div class="container">
-        <h1 id="projects" class="text-center">Our great projects</h1>
-        <div class="filter-button-group">
-            <div class="row">
-                <div class="col-sm-3">
-                    <button data-filter="*" class="btn btn-black active">Show all</button>
+            <div class="row"> 
+                <div class="col-md-4 text-center features-item">
+                    <img class="img-fluid" src="/images/benefits1.png">
                 </div>
-                <div class="col-sm-3">
-                    <button data-filter=".development" class="btn btn-black">Development</button>
+                <div class="col-md-4 text-center features-item">
+                    <img class="img-fluid" src="/images/benefits2.png">
                 </div>
-                <div class="col-sm-3">
-                    <button data-filter=".design" class="btn btn-black">Design</button>
-                </div>
-                <div class="col-sm-3">
-                    <button data-filter=".illustration" class="btn btn-black">Illustration</button>
+                <div class="col-md-4 text-center features-item">
+                    <img class="img-fluid" src="/images/benefits3.png">
                 </div>
             </div>
-
-        </div>
-        <div class="grid">
-            <div class="element-item illustration development">
-                <img class="img-fluid" src="/images/ball.png">
-            </div>
-            <div class="element-item design illustration">
-                <img class="img-fluid" src="/images/festival.png">
-            </div>
-            <div class="element-item design development">
-                <img class="img-fluid" src="/images/fruits.png">
-            </div>
-            <div class="element-item illustration desgin">
-                <img class="img-fluid" src="/images/jellyfish.png">
-            </div>
-            <div class="element-item development">
-                <img class="img-fluid" src="/images/mirros.png">
-            </div>
-            <div class="element-item illustration">
-                <img class="img-fluid" src="/images/spine.png">
-            </div>
-        </div>
-    </div><!-- .container -->
-</div><!-- .projects -->
-<div class="laptop">
+    </div>
+</div>
+<div id="roadmap" class="roadmap">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="laptop-text">
-                    <h1>All you need is style</h1>
-                    <p>Make your website stand out with the power of Trumpet.
-                        Make your website stand out with the power of Trumpet.
-                        Make your website stand out with the power of Trumpet.
-                    </p>
+            <div class="col-md-6 pull-md-6">
+                <div class="roadmap-image">
+                    <img class="img-fluid" src="/images/roadmap.png">
                 </div>
             </div>
-            <div class="col-md-8">
-                <img class="img-fluid" src="/images/laptop.png">
+            <div class="col-md-6 push-md-6">
+                <div class="roadmap-text">
+                    <h4>Whitepaper is coming soon. Subscribe to our newsletter and be the first to read it.</h4>
+                    <form class="ml-block-form" action="https://app.mailerlite.com/webforms/submit/t7l4q1" data-id="594937" data-code="t7l4q1" method="POST" target="_blank">
+                        <input class="input input-white" id="email" type="email" name="fields[email]" value="Email address" autocomplete="email" x-autocompletetype="email" spellcheck="false" autocapitalize="off" autocorrect="off" onfocus="window.clearForm()" onblur="window.addPlaceholder()" required />
+                        <input type="hidden" name="ml-submit" value="1" />
+                        <button type="submit" class="btn btn-white">
+                            Subscribe
+                        </button>
+                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                            <img src="https://static.mailerlite.com/images/rolling@2x.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div><!-- .container -->
-</div><!-- .laptop -->
+    </div>
+</div>
 <div id="team" class="team">
     <div class="container">
         <h1 class="text-center">Meet the team</h1>
+        <p class="text-center">The core team have been working together for more than 3 years. ByteBet team consist freelancers we have been working with for years helping us with design and development related activities.</p>
         <div class="team-members-div">
             <div class="team-member">
-                <img class="img-fluid" src="/images/team-member-2.png">
-                <div class="team-member-overlay">
-                    <p>Tamas Torok</p>
-                    <h2>Marketing specialist & author</h2>
-                    <div class="team-social">
-                        <ul>
-                            <li><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a></li>
-                            <li><a href="https://linkedin.com"><i class="icon ion-social-twitter"></i></a></li>
-                            <li><a href="https://twitter.com"><i class="icon ion-social-linkedin"></i></a></li>
-                        </ul>
-                    </div>
+                <img class="img-fluid" src="/images/t.jpg">
+                <div class="team-member-text">
+                    <h2>Tamas Torok <a href="https://www.linkedin.com/in/toroktomi/" target="_blank"><i class="icon ion-social-linkedin"></i></a></h2>
+                    <p>Tamas has been working in the tech sector for 4 years, overseeing the full marketing operation of startup companies, being responsible for driving growth. He successfully self-published two books on Amazon and also guest writer on leading online marketing blogs.</p>
                 </div>
             </div>
             <div class="team-member">
-                <img class="img-fluid" src="/images/team-member-4.png">
-                <div class="team-member-overlay">
-                    <p>Zoltan Molnar</p>
-                    <h2>Big data specialist & solution architect</h2>
-                    <div class="team-social">
-                        <ul>
-                            <li><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a></li>
-                            <li><a href="https://linkedin.com"><i class="icon ion-social-twitter"></i></a></li>
-                            <li><a href="https://twitter.com"><i class="icon ion-social-linkedin"></i></a></li>
-                        </ul>
-                    </div>
+                <img class="img-fluid" src="/images/z.jpg">
+                <div class="team-member-text">
+                    <h2>Zoltan Molnar <a href="https://www.linkedin.com/in/zmolnar/" target="_blank"><i class="icon ion-social-linkedin"></i></a></h2>
+                    <p>Mathematics and big data enthusiast with 5 years experience with DevOps technologies. Zoltan was the CTO of an investor backed startup for 3 years and works as a Consultant developer.</p>
                 </div>
             </div>
         </div>
-    </div><!-- .container -->
-</div><!-- .team -->
-<div id="feature" class="mobile">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 push-md-6">
-                <div class="mobile-text">
-                    <h1>An amazing featured product</h1>
-                    <p>Make your website stand out with the power of Trumpet.
-                        Make your website stand out with the power of Trumpet.
-                        Make your website stand out with the power of Trumpet.
-                        Make your website stand out with the power of Trumpet.
-                        Make your website stand out with the power of Trumpet.
-                        Make your website stand out with the power of Trumpet.</p>
-                </div>
-            </div>
-            <div class="col-md-6 pull-md-6">
-                <div class="mobile-image">
-                    <img class="img-fluid" src="/images/iphone.png">
-                </div>
-            </div>
-        </div>
-    </div><!-- .container -->
-</div><!-- .mobile -->
-<div id="testimonials" class="testimonials">
-    <div class="container">
-        <div class="testimonials-div">
-            <div class="testimonial">
-                <img class="rounded-circle" src="/images/person1.png">
-                <p class="testimonial-role">CEO at 'WireTire'</p>
-                <p class="testimonial-content">
-                    This theme is everything I could ever want in a template.
-                    professional, fun and looks awesome!
-                </p>
-            </div>
-            <div class="testimonial">
-                <img class="rounded-circle" src="/images/person2.png">
-                <p class="testimonial-role">CEO at 'WireTire'</p>
-                <p class="testimonial-content">
-                    This theme is everything I could ever want in a template.
-                    professional, fun and looks awesome!
-                </p>
-            </div>
-            <div class="testimonial">
-                <img class="rounded-circle" src="/images/person3.png">
-                <p class="testimonial-role">CEO at 'WireTire'</p>
-                <p class="testimonial-content">
-                    This theme is everything I could ever want in a template.
-                    professional, fun and looks awesome!
-                </p>
-            </div>
-        </div>
-    </div><!-- .container -->
-</div><!-- .testimonials -->
-
-<div id="contact" class="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-content col-md-6 offset-md-1">
-                <h2 class="text-center">Contact us</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="contact-info-div">
-                            <h3 class="text-center">Office</h3>
-                            <p>
-                                350 5th Ave
-                                Floor 54
-                                New York, NY, 10118
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="contact-info-div">
-                            <h3 class="text-center">Phone</h3>
-                            <p>
-                                +1 646 398-8084
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="contact-info-div">
-                            <h3 class="text-center">Email</h3>
-                            <p>
-                                hello@example.com
-                            </p>
-                        </div>
-                    </div>
-                </div><!-- .row -->
-                <div class="contact-form-div">
-                    <form class="contact-form">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="name_input">Your name</label>
-                                    <input type="text" name="name" class="form-control" id="name_input"
-                                           placeholder="Enter your name" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="email_input">Your email</label>
-                                    <input type="email" name="email" class="form-control" id="email_input"
-                                           placeholder="Enter your email" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="message_input">Your message</label>
-                                    <textarea name="message" class="form-control" id="message_input" rows="5"
-                                              placeholder="Enter your message..." required></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <p class="message-status "></p>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-black-full btn-wide">Submit <i
-                                    class="icon ion-ios-arrow-thin-right"></i></button>
-                        </div>
-                    </form>
-                </div><!-- .contact-form-div -->
-
-                <div class="spinner-overlay">
-                    <div class="spinner">
-                        <div class="sk-fading-circle">
-                            <div class="sk-circle1 sk-circle"></div>
-                            <div class="sk-circle2 sk-circle"></div>
-                            <div class="sk-circle3 sk-circle"></div>
-                            <div class="sk-circle4 sk-circle"></div>
-                            <div class="sk-circle5 sk-circle"></div>
-                            <div class="sk-circle6 sk-circle"></div>
-                            <div class="sk-circle7 sk-circle"></div>
-                            <div class="sk-circle8 sk-circle"></div>
-                            <div class="sk-circle9 sk-circle"></div>
-                            <div class="sk-circle10 sk-circle"></div>
-                            <div class="sk-circle11 sk-circle"></div>
-                            <div class="sk-circle12 sk-circle"></div>
-                        </div>
-                    </div>
-                </div><!-- .spinner-overlay -->
-
-            </div><!-- .contact-content -->
-        </div><!-- .row -->
-    </div><!-- .container -->
-    <div id="map"></div>
-</div><!-- .contact -->
-
-
+    </div>
+</div>
 <footer class="footer">
     <div class="container">
         <div class="footer-brand">
-            <a href="/"><img src="/images/logo.png" alt="trumpet"></a>
+            <a href="/"><img src="/images/byte_bet_logo.png" alt="trumpet"></a>
         </div>
         <nav class="footer-nav">
             <ul>
-                <li><a href="#feature">About</a></li>
-                <li><a href="#team">The team</a></li>
-                <li><a href="#testimonials">Clients say</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#roadmap">Whitepaper</a></li>
+                <li><a href="#roadmap">Crowdsale</a></li>
             </ul>
         </nav>
         <div class="footer-text">
             <p class="text-center">
-                Our promise to you is responsive communication and transparency.
-                When you call or e-mail us, we respond right away and explain all clearly.
+            Peer-to-peer, community-driven betting platform on Ethereum
+            </p>
+            <p class="text-center">
+                <a href="mailto:hello@byte.bet" target="_blank">hello@byte.bet</a>
             </p>
         </div>
         <div class="footer-social">
             <ul>
-                <li><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a></li>
-                <li><a href="https://linkedin.com"><i class="icon ion-social-twitter"></i></a></li>
-                <li><a href="https://twitter.com"><i class="icon ion-social-linkedin"></i></a></li>
+                <li><a href="https://www.facebook.com/ByteBet-177015999513763/" target="_blank"><i class="icon ion-social-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Bytebetplatform" target="_blank"><i class="icon ion-social-twitter"></i></a></li>
             </ul>
         </div>
         <div class="footer-copyrights">
             <p class="text-center">
                 &copy;
                 <script type="text/javascript">document.write(new Date().getFullYear());</script>
-                Digital Awesome.
+                ByteBet.
             </p>
         </div>
-    </div><!-- .container -->
+    </div>
 </footer>
-<script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAde0W7clS0RfJt9OKKg4oaiPQcFqRwGQ"></script>
 <script src="/bundle.js"></script>
+
+<script>
+    function ml_webform_success_6378757() {
+        var $ = ml_jQuery || jQuery;
+
+        $('.ml-subscribe-form-6378757 .ml-block-success').show();
+        $('.ml-subscribe-form-6378757 .ml-block-form').hide();
+    };
+</script>
+<script type="text/javascript" src="https://static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f"></script>
 </body>
 </html>

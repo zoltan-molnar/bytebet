@@ -30,15 +30,14 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/input';
 
 // 6. Section-specific styles
 @import
-  'sections/coffee',
-  'sections/contact',
-  'sections/laptop',
-  'sections/mobile',
-  'sections/projects',
+  'sections/what-is',
+  'sections/features',
+  'sections/roadmap',
+  'sections/subscribe',
   'sections/team',
-  'sections/testimonials',
-  'sections/hero';
+  'sections/bytebet';

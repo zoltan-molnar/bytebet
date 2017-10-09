@@ -1,25 +1,15 @@
-.mobile {
-  background-color: $pink;
+.roadmap {
+  background-color: $dark-blue;;
   padding-top: 50px;
+  padding-bottom: 50px; 
 
-  @include media-breakpoint-up('sm') {
-    padding-top: 0;
-  }
-
-
-  .mobile-image {
+  .roadmap-image {
     img {
       max-height: 800px;
-      margin:  0 auto -70px;
-      display: block;
-
-      @include media-breakpoint-up(md) {
-        margin: -70px auto;
-      }
     }
   }
 
-  .mobile-text {
+  .roadmap-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +20,7 @@
       height: 600px;
     }
 
-    h1 {
+    h4 {
       margin-top: 30px;
       margin-bottom: 50px;
     }

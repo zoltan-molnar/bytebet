@@ -1,14 +1,12 @@
-.projects {
-  padding-top: 160px;
+.subscribe {
+  padding-top: 100px;
   padding-bottom: 100px;
-
-  @include media-breakpoint-up(md) {
-    padding-top: 370px;
-  }
-
+  background-color: $brand-color;
+  color: $white;
 
   h1 {
     margin-bottom: 50px;
+    text-align: center;
   }
 
   .filter-button-group {
@@ -18,10 +16,6 @@
     button {
       width: 100%;
       margin-bottom: 5px;
-
-      &.active {
-        @extend .btn-black-full;
-      }
 
       @include on-event() {
         outline: none;
@@ -43,5 +37,10 @@
         border-radius: 8px;
       }
     }
+  }
+
+  .form-container{
+    text-align: center;
+    padding: 40px 20px 0 20px;
   }
 }

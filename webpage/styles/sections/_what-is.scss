@@ -1,0 +1,30 @@
+.what-is {
+  position: relative;
+  background-color: $dark-blue;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  min-height: 600px;
+
+  .what-is-text {
+    color: $white;
+    h1 {
+      font-size: 3.4rem;
+    }
+        
+    p {
+      font-size: 1.7rem;
+      padding: 35px 0;
+    }
+  }
+
+  .what-is-buttons {
+    max-width: 450px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    button {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -54,7 +54,11 @@ $black: rgb(0, 0, 0)!default;
 
 /// White
 /// @type Color
-$white: rgb(255, 255, 255)!default;
+$white: rgba(255, 255, 255, 0.85)!default;
+
+/// Dark Blue
+/// @type Color
+$dark-blue: rgb(2, 20, 39)!default;
 
 
 
