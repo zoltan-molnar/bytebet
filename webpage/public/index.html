@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,87 +13,126 @@
     <meta property="og:image:width" content="400">
     <meta property="og:image:height" content="400">
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-107703916-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107703916-1');
     </script>
     <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:649403,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 649403, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
             a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
     <script type="text/javascript">
-    function clearForm() {
-        element = document.getElementById('email');
-        if (element.value === 'Email address') {
-            element.value = '';
+        function clearForm() {
+            element = document.getElementById('email');
+            if (element.value === 'Email address') {
+                element.value = '';
+            }
         }
-    }
-    function addPlaceholder() {
-        element = document.getElementById('email');
-        if (!element.value) {
-            element.value = 'Email address';
+        function addPlaceholder() {
+            element = document.getElementById('email');
+            if (!element.value) {
+                element.value = 'Email address';
+            }
         }
-    }
     </script>
 </head>
+
 <body>
-<div class="bytebet-bg">
-    <header class="header">
-        <div class="container">
-            <nav class="navigation">
-                <a class="navbar-brand" href="/"><img src="/images/byte_bet_logo.png"></a>
-                <div class="hamburger">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner">
+    <div class="bytebet-bg">
+        <header class="header">
+            <div class="container">
+                <nav class="navigation">
+                    <a class="navbar-brand" href="/">
+                        <img src="/images/byte_bet_logo.png">
+                    </a>
+                    <div class="hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="navbar">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="#about">About</a>
+                            <a class="nav-item nav-link" href="#team">Team</a>
+                            <a class="nav-item nav-link" target="_blank" href="/ByteBet-Whitepaper.pdf">Whitepaper</a>
+                            <a class="nav-item nav-link" href="#roadmap">Crowdsale</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="bytebet">
+            <div class="bytebet-content text-center">
+                <div class="container">
+                    <h1>Peer-to-peer, community-driven betting platform on Ethereum</h1>
+                    <h2>
+                        <span id="counter">0d 00h 00m 00s</span> until pre-token donation</h2>
+
+                    <script type="text/javascript">
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("Nov 7, 2017 18:00:00").getTime();
+
+                        // Update the count down every 1 second
+                        var x = setInterval(function () {
+
+                            // Get todays date and time
+                            var now = new Date().getTime();
+
+                            // Find the distance between now an the count down date
+                            var distance = countDownDate - now;
+
+                            // Time calculations for days, hours, minutes and seconds
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Display the result in the element with id="demo"
+                            document.getElementById("counter").innerHTML = days + "d " + hours + "h "
+                                + minutes + "m " + seconds + "s ";
+                        }, 1000);
+                    </script>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <a class="btn btn-white" target="_blank" href="/ByteBet-Whitepaper.pdf">
+                                Download the whitepaper
+                            </a>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <a class="btn btn-white" href="#roadmap">
+                                Subscribe to get notified about the project
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div id="navbar">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#about">About</a>
-                        <a class="nav-item nav-link" href="#team">Team</a>
-                        <a class="nav-item nav-link" href="#roadmap">Whitepaper</a>
-                        <a class="nav-item nav-link" href="#roadmap">Crowdsale</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <div class="bytebet">
-        <div class="bytebet-content text-center">
-            <div class="container">
-                <h1>Peer-to-peer, community-driven betting platform on Ethereum</h1>
-                <p>
-                    <a class="btn btn-white btn-wide" href="#roadmap">
-                        Subscribe to get notified about the project
-                    </a>
-                </p>
             </div>
         </div>
     </div>
-</div>
-<div class="what-is" id="about">
-    <div class="container">
-        <div class="what-is-text">
-            <h1 class="text-center">What is ByteBet?</h1>
-            <p class="text-center">ByteBet is a peer-to-peer, community-driven betting platform that allows players from anywhere in the world to create bets and play against each other. By using blockchain technology, games can’t be manipulated and fees can be significantly lowered. This leaves more money for the players.</p>
-        </div>
-        <div class="what-is-image">
-            <img class="img-fluid" src="/images/process.png">
+    <div class="what-is" id="about">
+        <div class="container">
+            <div class="what-is-text">
+                <h1 class="text-center">What is ByteBet?</h1>
+                <p class="text-center">ByteBet is a peer-to-peer, community-driven betting platform that allows players from anywhere in the world
+                    to create bets and play against each other. By using blockchain technology, games can’t be manipulated
+                    and fees can be significantly lowered. This leaves more money for the players.</p>
+            </div>
+            <div class="what-is-image">
+                <img class="img-fluid" src="/images/process.png">
+            </div>
         </div>
     </div>
-</div>
-<div class="features">
-    <div class="container">
-            <div class="row"> 
+    <div class="features">
+        <div class="container">
+            <div class="row">
                 <div class="col-md-4 text-center features-item">
                     <img class="img-fluid" src="/images/benefits1.png">
                 </div>
@@ -103,102 +143,135 @@
                     <img class="img-fluid" src="/images/benefits3.png">
                 </div>
             </div>
-    </div>
-</div>
-<div id="roadmap" class="roadmap">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 pull-md-6">
-                <div class="roadmap-image">
-                    <img class="img-fluid" src="/images/roadmap.png">
-                </div>
-            </div>
-            <div class="col-md-6 push-md-6">
-                <div class="roadmap-text">
-                    <h4>Whitepaper is coming soon. Subscribe to our newsletter and be the first to read it.</h4>
-                    <form class="ml-block-form" action="https://app.mailerlite.com/webforms/submit/t7l4q1" data-id="594937" data-code="t7l4q1" method="POST" target="_blank">
-                        <input class="input input-white" id="email" type="email" name="fields[email]" value="Email address" autocomplete="email" x-autocompletetype="email" spellcheck="false" autocapitalize="off" autocorrect="off" onfocus="window.clearForm()" onblur="window.addPlaceholder()" required />
-                        <input type="hidden" name="ml-submit" value="1" />
-                        <button type="submit" class="btn btn-white">
-                            Subscribe
-                        </button>
-                        <button disabled="disabled" style="display: none;" type="button" class="loading">
-                            <img src="https://static.mailerlite.com/images/rolling@2x.gif" width="20" height="20" style="width: 20px; height: 20px;">
-                        </button>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
-</div>
-<div id="team" class="team">
-    <div class="container">
-        <h1 class="text-center">Meet the team</h1>
-        <p class="text-center">The core team have been working together for more than 3 years. The ByteBet team consists of freelancers who are helping us with design and development related activities.</p>
-        <div class="team-members-div">
-            <div class="team-member">
-                <img class="img-fluid" src="/images/t.jpg">
-                <div class="team-member-text">
-                    <h2>Tamas Torok <a href="https://www.linkedin.com/in/toroktomi/" target="_blank"><i class="icon ion-social-linkedin"></i></a></h2>
-                    <p>Tamas has been working in the tech sector for 4 years. He oversees the full marketing operation of startup companies, and is responsible for driving growth. He successfully self-published two books on Amazon and has guest written for leading online marketing blogs.</p>
+    <div id="roadmap" class="roadmap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="roadmap-image">
+                        <img class="img-fluid" src="/images/roadmap.png">
+                    </div>
                 </div>
-            </div>
-            <div class="team-member">
-                <img class="img-fluid" src="/images/z.jpg">
-                <div class="team-member-text">
-                    <h2>Zoltan Molnar <a href="https://www.linkedin.com/in/zmolnar/" target="_blank"><i class="icon ion-social-linkedin"></i></a></h2>
-                    <p>Mathematics and big data enthusiast possessing 5 years’ experience with DevOps technologies. Zoltan was the CTO of an investor-backed startup for 3 years, and now works as a consultant developer.</p>
+                <div class="col-md-6">
+                    <div class="roadmap-text">
+                        <h4>Check out our
+                            <a target="_blank" href="/ByteBet-Whitepaper.pdf">whitepaper</a> and subscribe to our newsletter to be up to date.</h4>
+                        <form class="ml-block-form" action="https://app.mailerlite.com/webforms/submit/t7l4q1" data-id="594937" data-code="t7l4q1"
+                            method="POST" target="_blank">
+                            <input class="input input-white" id="email" type="email" name="fields[email]" value="Email address" autocomplete="email"
+                                x-autocompletetype="email" spellcheck="false" autocapitalize="off" autocorrect="off" onfocus="window.clearForm()"
+                                onblur="window.addPlaceholder()" required />
+                            <input type="hidden" name="ml-submit" value="1" />
+                            <button type="submit" class="btn btn-white">
+                                Subscribe
+                            </button>
+                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                <img src="https://static.mailerlite.com/images/rolling@2x.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer-brand">
-            <a href="/"><img src="/images/byte_bet_logo.png" alt="trumpet"></a>
-        </div>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#roadmap">Whitepaper</a></li>
-                <li><a href="#roadmap">Crowdsale</a></li>
-            </ul>
-        </nav>
-        <div class="footer-text">
-            <p class="text-center">
-            Peer-to-peer, community-driven betting platform on Ethereum
-            </p>
-            <p class="text-center">
-                <a href="mailto:hello@byte.bet" target="_blank">hello@byte.bet</a>
-            </p>
-        </div>
-        <div class="footer-social">
-            <ul>
-                <li><a href="https://www.facebook.com/ByteBet-177015999513763/" target="_blank"><i class="icon ion-social-facebook"></i></a></li>
-                <li><a href="https://twitter.com/Bytebetplatform" target="_blank"><i class="icon ion-social-twitter"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-copyrights">
-            <p class="text-center">
-                &copy;
-                <script type="text/javascript">document.write(new Date().getFullYear());</script>
-                ByteBet.
-            </p>
+    <div id="team" class="team">
+        <div class="container">
+            <h1 class="text-center">Meet the team</h1>
+            <p class="text-center">The core team have been working together for more than 3 years. The ByteBet team consists of freelancers who
+                are helping us with design and development related activities.</p>
+            <div class="team-members-div">
+                <div class="team-member">
+                    <img class="img-fluid" src="/images/t.jpg">
+                    <div class="team-member-text">
+                        <h2>Tamas Torok
+                            <a href="https://www.linkedin.com/in/toroktomi/" target="_blank">
+                                <i class="icon ion-social-linkedin"></i>
+                            </a>
+                        </h2>
+                        <p>Tamas has been working in the tech sector for 4 years. He oversees the full marketing operation of
+                            startup companies, and is responsible for driving growth. He successfully self-published two
+                            books on Amazon and has guest written for leading online marketing blogs.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img class="img-fluid" src="/images/z.jpg">
+                    <div class="team-member-text">
+                        <h2>Zoltan Molnar
+                            <a href="https://www.linkedin.com/in/zmolnar/" target="_blank">
+                                <i class="icon ion-social-linkedin"></i>
+                            </a>
+                        </h2>
+                        <p>Mathematics and big data enthusiast possessing 5 years’ experience with DevOps technologies. Zoltan
+                            was the CTO of an investor-backed startup for 3 years, and now works as a consultant developer.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
-<script src="/bundle.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <a href="/">
+                    <img src="/images/byte_bet_logo.png" alt="trumpet">
+                </a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a href="#roadmap">Whitepaper</a>
+                    </li>
+                    <li>
+                        <a href="#roadmap">Crowdsale</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer-text">
+                <p class="text-center">
+                    Peer-to-peer, community-driven betting platform on Ethereum
+                </p>
+                <p class="text-center">
+                    <a href="mailto:hello@byte.bet" target="_blank">hello@byte.bet</a>
+                </p>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/ByteBet-177015999513763/" target="_blank">
+                            <i class="icon ion-social-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Bytebetplatform" target="_blank">
+                            <i class="icon ion-social-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-copyrights">
+                <p class="text-center">
+                    &copy;
+                    <script type="text/javascript">document.write(new Date().getFullYear());</script> ByteBet.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/bundle.js"></script>
+    <script>
+                                                   function ml_webform_success_6378757() {
+                                                       var $ = ml_jQuery || jQuery;
 
-<script>
-    function ml_webform_success_6378757() {
-        var $ = ml_jQuery || jQuery;
-
-        $('.ml-subscribe-form-6378757 .ml-block-success').show();
-        $('.ml-subscribe-form-6378757 .ml-block-form').hide();
-    };
-</script>
-<script type="text/javascript" src="https://static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f"></script>
+                                                       $('.ml-subscribe-form-6378757 .ml-block-success').show();
+                                                       $('.ml-subscribe-form-6378757 .ml-block-form').hide();
+                                                   };
+    </script>
+    <script type="text/javascript" src="https://static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f"></script>
 </body>
+
 </html>

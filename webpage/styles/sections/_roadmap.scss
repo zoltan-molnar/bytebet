@@ -1,7 +1,7 @@
 .roadmap {
-  background-color: $dark-blue;;
+  background-color: $dark-blue;
   padding-top: 50px;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
 
   .roadmap-image {
     img {
@@ -16,13 +16,19 @@
     color: $white;
     padding-bottom: 30px;
 
-    @include media-breakpoint-up('md') {
+    @include media-breakpoint-up("md") {
       height: 600px;
     }
 
     h4 {
       margin-top: 30px;
       margin-bottom: 50px;
+
+      a,
+      a:hover {
+        color: white;
+        text-decoration: underline;
+      }
     }
   }
 }
