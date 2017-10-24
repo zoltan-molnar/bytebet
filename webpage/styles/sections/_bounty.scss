@@ -1,0 +1,29 @@
+.bounty {
+  background-color: $dark-blue;
+  color: $white;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  .bounty-item {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    img {
+      max-width: 250px;
+    }
+
+    a,
+    a:hover {
+      color: white;
+      text-decoration: none;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
