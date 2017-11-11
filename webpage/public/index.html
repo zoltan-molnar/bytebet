@@ -29,6 +29,7 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
+    <script src="//load.sumome.com/" data-sumo-site-id="2475c1008a3e3bb00bd1fbc03e84878519c6cf76d14d9fbebad675db1b2a3cd5" async="async"></script>
     <script type="text/javascript">
         function clearForm() {
             element = document.getElementById('email');
@@ -63,7 +64,7 @@
                         <div class="navbar-nav">
                             <a class="nav-item nav-link" href="#about">About</a>
                             <a class="nav-item nav-link" href="#team">Team</a>
-                            <a class="nav-item nav-link" target="_blank" href="/ByteBet-Whitepaper.pdf">Whitepaper</a>
+                            <a class="nav-item nav-link" target="_blank" href="/ByteBet-Whitepaper.pdf" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});">Whitepaper</a>
                             <a class="nav-item nav-link" href="#roadmap">Donation</a>
                             <a class="nav-item nav-link" href="#bounty">Bounty</a>
                         </div>
@@ -80,7 +81,7 @@
 
                     <script type="text/javascript">
                         // Set the date we're counting down to
-                        var countDownDate = new Date("Nov 7, 2017 18:00:00").getTime();
+                        var countDownDate = new Date("Nov 21, 2017 18:00:00").getTime();
 
                         // Update the count down every 1 second
                         var x = setInterval(function () {
@@ -104,7 +105,7 @@
                     </script>
                     <div class="row">
                         <div class="col-md-6 text-center">
-                            <a class="btn btn-white" target="_blank" href="/ByteBet-Whitepaper.pdf">
+                            <a class="btn btn-white" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});" target="_blank" href="/ByteBet-Whitepaper.pdf">
                                 Download Whitepaper
                             </a>
                         </div>
@@ -157,14 +158,14 @@
                 <div class="col-md-6">
                     <div class="roadmap-text">
                         <h4>Check out our
-                            <a target="_blank" href="/ByteBet-Whitepaper.pdf">whitepaper</a> and sign up to get updates.</h4>
+                            <a target="_blank" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});" href="/ByteBet-Whitepaper.pdf">whitepaper</a> and sign up to get updates.</h4>
                         <form class="ml-block-form" action="https://app.mailerlite.com/webforms/submit/t7l4q1" data-id="594937" data-code="t7l4q1"
                             method="POST" target="_blank">
                             <input class="input input-white" id="email" type="email" name="fields[email]" value="Email address" autocomplete="email"
                                 x-autocompletetype="email" spellcheck="false" autocapitalize="off" autocorrect="off" onfocus="window.clearForm()"
                                 onblur="window.addPlaceholder()" required />
                             <input type="hidden" name="ml-submit" value="1" />
-                            <button type="submit" class="btn btn-white">
+                            <button type="submit" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Subscriber'});" class="btn btn-white">
                                 Sign up
                             </button>
                             <button disabled="disabled" style="display: none;" type="button" class="loading">
