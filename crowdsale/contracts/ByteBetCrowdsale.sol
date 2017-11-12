@@ -1,10 +1,10 @@
 pragma solidity ^0.4.11;
 
 import './ByteBetToken.sol';
-import './zeppelin-contracts/token/MintableToken.sol';
-import './zeppelin-contracts/math/SafeMath.sol';
-import './zeppelin-contracts/crowdsale/RefundVault.sol';
-import './zeppelin-contracts/ownership/Ownable.sol';
+import 'zeppelin-solidity/contracts/token/MintableToken.sol';
+import 'zeppelin-solidity/contracts/math/SafeMath.sol';
+import 'zeppelin-solidity/contracts/crowdsale/RefundVault.sol';
+import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
 contract ByteBetCrowdsale is Ownable {
   using SafeMath for uint256;
@@ -18,10 +18,10 @@ contract ByteBetCrowdsale is Ownable {
   uint256 public startTime;
   uint256 public endTime;
 
-  uint256 public preCap;
-  uint256 public preGoal;
-  uint256 public mainCap;
-  uint256 public mainGoal;
+  uint256 public constant preGoal = 150 ether;
+  uint256 public constant preCap = 600 ether;
+  uint256 public constant mainGoal = 3000 ether;
+  uint256 public constant mainCap = 50000 ether;
 
   // address where funds are collected
   address public wallet;
@@ -61,11 +61,6 @@ contract ByteBetCrowdsale is Ownable {
     endTime = _endTime;
     wallet = _wallet;
     vault = new RefundVault(wallet);
-
-    preGoal = 150 ether;
-    preCap = 600 ether;
-    mainGoal = 3000 ether;
-    mainCap = 50000 ether;
 
     token.mint(wallet, 100000 ether);
   }
