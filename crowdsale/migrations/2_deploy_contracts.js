@@ -8,19 +8,21 @@ module.exports = function(deployer, network, accounts) {
     const hours = 60 * minutes;
     const days = 24 * hours;
     const weeks = 7 * days;
+ 
+    const startTime = web3.eth.getBlock('latest').timestamp + 15 * minutes;
+    const endTime = startTime + (15 * minutes);
+    const rate = 130;
+    const goal = web3.toWei(150, "ether");
+    const cap = web3.toWei(600, "ether");
+    const wallet = "0xab379b2255b66c2829ed74b7e7d6a51e090904f8"
 
-    const preStartTime = web3.eth.getBlock('latest').timestamp + 5 * minutes
-    const preEndTime = preStartTime + (15 * minutes)
-    const startTime = preEndTime
-    const endTime = startTime + (15 * minutes)
-
-    const wallet = "0x00D75b582f6387dDb9fc0f7517350Ed7Ce6B50De"
-
-    console.log("preStartTime", preStartTime);
-    console.log("preEndTime", preEndTime);
     console.log("startTime", startTime);
     console.log("endTime", endTime);
+    console.log("rate", rate);
+    console.log("goal", goal);
+    console.log("cap", cap);
     console.log("wallet", wallet);
-  
-    deployer.deploy(ByteBetCrowdsale, preStartTime, preEndTime, startTime, endTime, wallet, {gas: 5000000})
+
+    // uint256 _startTime, uint256 _endTime, uint256 _rate, uint256 _goal, uint256 _cap, address _wallet
+    deployer.deploy(ByteBetCrowdsale, startTime, endTime, rate, goal, cap, wallet, {gas: 4500000})
 };
