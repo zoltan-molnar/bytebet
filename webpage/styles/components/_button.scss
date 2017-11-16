@@ -13,6 +13,10 @@ input[type="submit"].btn {
   border-width: 2px;
   font-weight: 700;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   &.btn-white {
     color: $white;
     border: 1px solid $white;

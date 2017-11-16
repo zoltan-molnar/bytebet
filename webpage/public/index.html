@@ -77,8 +77,31 @@
                 <div class="container">
                     <h1>Peer-to-peer, community-driven betting platform on Ethereum</h1>
                     <h2>
-                        <span id="counter">0d 00h 00m 00s</span> until pre-token donation</h2>
+                        Pre-sale started! Join now and get 30% discount!
+                        <span id="count_down" style="display: block; margin-top: 32px;"></span>             
+                    </h2>
+                    <script>
+                        var countDownDate = new Date("Nov 21, 2017 18:00:00").getTime();
+                        function setCountDown() {
+                            var now = Date.now();
+                            var distance = countDownDate - now;
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                            document.getElementById("count_down").innerHTML = (
+                                days + "d " +
+                                hours + "h " +
+                                minutes + "m " +
+                                seconds + "s " +
+                                "until the end of pre-sale"
+                            );
+                        }
+                        setInterval(setCountDown, 1000);
+                    </script>
+                    <!-- <h2>
+                        <span id="counter">0d 00h 00m 00s</span> until pre-token donation</h2>
                     <script type="text/javascript">
                         // Set the date we're counting down to
                         var countDownDate = new Date("Nov 21, 2017 18:00:00").getTime();
@@ -102,17 +125,156 @@
                             document.getElementById("counter").innerHTML = days + "d " + hours + "h "
                                 + minutes + "m " + seconds + "s ";
                         }, 1000);
-                    </script>
+                    </script> -->
+                    <h2>
+
+                    </h2>
                     <div class="row">
                         <div class="col-md-6 text-center">
                             <a class="btn btn-white" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});" target="_blank" href="/ByteBet-Whitepaper.pdf">
                                 Download Whitepaper
                             </a>
                         </div>
-                        <div class="col-md-6 text-center">
+                        <!-- <div class="col-md-6 text-center">
                             <a class="btn btn-white" href="#roadmap">
                                 Sign up to get updates
                             </a>
+                        </div>" -->
+                        <div class="col-md-6 text-center">
+                            <a id="toggle_presale" class="btn btn-white" href="javascript:void(0)">
+                                Join Pre-Sale!
+                            </a>
+                            <div id="overlay" style="display: none">
+                                <form class="shadow-5">
+                                    <div id="overlay_step1">
+                                        <div class="header">
+                                            Terms
+                                        </div>
+                                        <div class="content">
+                                            <p>
+                                                <label
+                                                    for="step1_email"
+                                                    class="textLabel"
+                                                >Email: </label>
+                                                <input
+                                                    id="step1_email"
+                                                    required
+                                                    class="input input-black"
+                                                    type="email"
+                                                    placeholder="email@example.com"
+                                                >
+                                            </p>
+                                            <p>
+                                                <input id="citizen_cb" type="checkbox" />
+                                                <label for="citizen_cb">I confirm that I’m not a US citizen</label>
+                                            </p>
+                                            <p>
+                                                <input id="share_cb" type="checkbox" />
+                                                <label for="share_cb">I won’t share this address with anyone</label>
+                                            </p>
+                                        </div>
+                                        <div class="action">
+                                            <button
+                                                id="step1_submit"
+                                                class="btn btn-black"
+                                                type="submit"
+                                            >
+                                                Show the address
+                                            </button>
+                                        </div>                       
+                                    </div>
+                                    <div id="overlay_step2">
+                                        <div class="header">
+                                            Send ETH
+                                        </div>
+                                        <div class="content">
+                                            <p>
+                                                <label
+                                                    for="step1_email"
+                                                    class="textLabel"
+                                                >To Address: </label>
+                                                <input
+                                                    readonly
+                                                    class="input input-black"
+                                                    type="text"
+                                                    value="0xf5a776967ADcE6f475881eC9EdD84AAed185B1dB"
+                                                >
+                                            </p>
+                                            <p class="red">
+                                                DO NOT send Ethereum from exchanges!
+                                                Use a wallet instead, see instructions in our <a target="_blank" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});" href="/ByteBet-Whitepaper.pdf">whitepaper</a>.
+                                            </p>
+                                            <p class="red">
+                                                Recommended Gas Limit is 200,000
+                                            </p>
+                                            <p class="red">
+                                                BBET tokens will be distributed automatically once the pre-sale ends.                                                    
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <script>
+                                var toggle = document.getElementById('toggle_presale');
+                                var overlay = document.getElementById('overlay');
+                                var form = overlay.children[0];
+                                var currentStep = '1';
+                                var elements = {
+                                    step1: {
+                                        email: document.getElementById('step1_email'),
+                                        cb1: document.getElementById('citizen_cb'),
+                                        cb2: document.getElementById('share_cb'),
+                                        button: document.getElementById('step1_submit')
+                                    }
+                                };
+                                function validateStep1() {
+                                    elements.step1.button.disabled = !(
+                                        elements.step1.email.value &&
+                                        elements.step1.cb1.checked &&
+                                        elements.step1.cb2.checked
+                                    );
+                                }
+                                function setStep() {
+                                    var i = 0;
+                                    for (; i < form.children.length; i += 1) {
+                                        var child = form.children[i];
+                                        child.className = 'hidden';
+                                        if (child.id.indexOf(currentStep) !== -1) {
+                                            child.className = '';
+                                        }
+                                    }
+                                }
+                                function toggleOverlay() {
+                                    currentStep = '1';
+                                    validateStep1();
+                                    setStep();
+                                    setTimeout(function () {
+                                        elements.step1.email.focus();
+                                    }, 200);
+                                    if (overlay.style.display === 'none') {
+                                        overlay.style.display = 'block';
+                                    } else {
+                                        overlay.style.display = 'none';
+                                    }
+                                }
+                                form.addEventListener('click', function(event) {
+                                    event.stopPropagation();
+                                })
+                                form.addEventListener('submit', function (event) {
+                                    event.preventDefault();
+                                    if (currentStep === '1') {
+                                        alert('What should I do with this: ' + elements.step1.email.value);
+                                    }
+                                    currentStep = String(Number(currentStep) + 1);
+                                    setStep();
+                                })
+                                toggle.addEventListener('click', toggleOverlay);
+                                overlay.addEventListener('click', toggleOverlay);
+
+                                elements.step1.email.addEventListener('change', validateStep1);
+                                elements.step1.cb1.addEventListener('change', validateStep1);
+                                elements.step1.cb2.addEventListener('change', validateStep1);
+                            </script>
                         </div>
                     </div>
                 </div>

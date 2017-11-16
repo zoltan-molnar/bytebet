@@ -2,7 +2,9 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 header.header {
-  padding-top: 40px;
+  @include media-breakpoint-up('sm') {
+    padding-top: 40px;
+  }
 
   nav.navigation{
     display: flex;

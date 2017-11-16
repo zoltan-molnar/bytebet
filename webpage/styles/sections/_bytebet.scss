@@ -2,13 +2,13 @@
   background: url("/images/pic2.jpg") top center no-repeat / cover;
 }
 .bytebet {
-  height: 500px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 100px;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up('sm') {
     height: 100vh;
   }
 
@@ -20,7 +20,7 @@
       padding-bottom: 50px;
       font-size: 1.8rem;
       text-shadow: 1px 1px 2px black;
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up('sm') {
         font-size: 2.8rem;
       }
     }
@@ -29,17 +29,17 @@
       padding-bottom: 50px;
       font-size: 1.0rem;
       text-shadow: 1px 1px 2px black;
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up('sm') {
         font-size: 1.5rem;
       }
     }
 
-    p {
+    > p {
       font-size: 1.2rem;
       max-width: 500px;
       margin: auto;
 
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up('sm') {
         font-size: 1.8rem;
       }
     }
@@ -49,6 +49,86 @@
       color: rgba(0, 0, 0, 0.9);
       margin-top: 8px;
       margin-bottom: 8px;
+    }
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    z-index: 99999;
+    form {
+        border-radius: 4px;
+        background: white;
+        color: rgba(0, 0, 0, 0.87);
+
+        @include media-breakpoint-up('sm') {
+          max-width: 600px;
+          margin: 0 auto;
+          margin-top: 32px;
+        }
+
+        > div {
+          display: flex;
+          flex-wrap: wrap;
+          .content {
+            min-width: 100%;
+            flex: 1 1 auto;
+            padding: 16px;
+            > p {
+              display: flex;
+              align-items: center;
+            }
+
+            > p > label {
+              flex: 0 0 auto;
+              margin: 0;
+              cursor: pointer;
+            }
+
+            > p > .textLabel {
+              padding-right: 8px;
+            }
+
+            > p > input {
+              flex: 1 1 auto;
+            }
+
+            > p > input[type=checkbox] {
+              flex: 0 0 auto;
+              margin-right: 8px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .header {
+          width: 100%;
+          padding: 16px;
+          border-bottom: 1px solid black;
+        }
+
+        .action {
+          text-align: right;
+          width: 100%;
+          padding: 16px;
+          border-top: 1px solid black;
+        }
+
+        .red {
+          display: block !important;
+          text-align: left;
+          color: red;
+
+          a {
+            color: red;
+            text-decoration: underline;
+          }
+        }
     }
   }
 }
