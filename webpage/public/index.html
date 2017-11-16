@@ -130,17 +130,17 @@
 
                     </h2>
                     <div class="row">
-                        <div class="col-md-6 text-center">
+                        <!-- <div class="col-md-6 text-center">
                             <a class="btn btn-white" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});" target="_blank" href="/ByteBet-Whitepaper.pdf">
                                 Download Whitepaper
                             </a>
-                        </div>
+                        </div> -->
                         <!-- <div class="col-md-6 text-center">
                             <a class="btn btn-white" href="#roadmap">
                                 Sign up to get updates
                             </a>
                         </div>" -->
-                        <div class="col-md-6 text-center">
+                        <div class="col-md-12 text-center">
                             <a id="toggle_presale" class="btn btn-white" href="javascript:void(0)">
                                 Join Pre-Sale!
                             </a>
@@ -151,15 +151,14 @@
                                             Terms
                                         </div>
                                         <div class="content">
-                                            <p>
+                                            <p class="textInput">
                                                 <label
                                                     for="step1_email"
-                                                    class="textLabel"
                                                 >Email: </label>
                                                 <input
                                                     id="step1_email"
                                                     required
-                                                    class="input input-black"
+                                                    class="input input-white-pure"
                                                     type="email"
                                                     placeholder="email@example.com"
                                                 >
@@ -170,7 +169,7 @@
                                             </p>
                                             <p>
                                                 <input id="share_cb" type="checkbox" />
-                                                <label for="share_cb">I won’t share this address with anyone</label>
+                                                <label for="share_cb">I’ve read the Terms and Conditions from ByteBet’s White Paper</label>
                                             </p>
                                         </div>
                                         <div class="action">
@@ -188,18 +187,20 @@
                                             Send ETH
                                         </div>
                                         <div class="content">
-                                            <p>
+                                            <p class="textInput">
                                                 <label
                                                     for="step1_email"
                                                     class="textLabel"
-                                                >To Address: </label>
+                                                >Send ETH to this address: </label>
                                                 <input
                                                     readonly
-                                                    class="input input-black"
+                                                    class="input input-white-pure eth"
                                                     type="text"
                                                     value="0xf5a776967ADcE6f475881eC9EdD84AAed185B1dB"
                                                 >
                                             </p>
+                                        </div>
+                                        <div class="action">
                                             <p class="red">
                                                 DO NOT send Ethereum from exchanges!
                                                 Use a wallet instead, see instructions in our <a target="_blank" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});" href="/ByteBet-Whitepaper.pdf">whitepaper</a>.

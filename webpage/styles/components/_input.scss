@@ -18,6 +18,11 @@ input.input {
     border: 1px solid $white;
   }
 
+  &.input-white-pure {
+    color: white;
+    border: 1px solid white;
+  }
+
   &.input-white-full {
     background-color: $white;
     color: $black;
