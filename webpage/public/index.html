@@ -271,7 +271,9 @@
                                 toggle.addEventListener('click', toggleOverlay);
                                 overlay.addEventListener('click', toggleOverlay);
 
-                                elements.step1.email.addEventListener('change', validateStep1);
+                                elements.step1.email.addEventListener('keyup', validateStep1);
+                                elements.step1.email.addEventListener('focus', validateStep1);
+                                elements.step1.email.addEventListener('keydown', validateStep1);
                                 elements.step1.cb1.addEventListener('change', validateStep1);
                                 elements.step1.cb2.addEventListener('change', validateStep1);
                             </script>
