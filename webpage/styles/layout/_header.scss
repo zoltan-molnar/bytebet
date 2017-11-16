@@ -89,8 +89,11 @@ header.header {
 
     &.is-active {
       position: fixed;
-      top: 40px;
+      top: 0;
       right: 20px;
+      @include media-breakpoint-up('sm') {
+        top: 40px;
+      }
     }
 
     @include media-breakpoint-up('md') {
