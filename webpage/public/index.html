@@ -148,7 +148,9 @@
                                 <form class="shadow-5">
                                     <div id="overlay_step1">
                                         <div class="header">
-                                            Terms
+                                                To be able to participate in our Pre-Sale,
+                                                you need to confirm that you’re not a US citizen and
+                                                accept the Terms and Conditions.
                                         </div>
                                         <div class="content">
                                             <p class="textInput">
@@ -206,6 +208,9 @@
                                                 Use a wallet instead, see instructions in our <a target="_blank" onClick="ga('send', 'event', { eventCategory: 'Conversion', eventAction: 'Click', eventLabel: 'Whitepaper'});" href="/ByteBet-Whitepaper.pdf">whitepaper</a>.
                                             </p>
                                             <p class="red">
+                                                Minimum per transaction is 0.1ETH
+                                            </p>
+                                            <p class="red">
                                                 Recommended Gas Limit is 200,000
                                             </p>
                                             <p class="red">
@@ -228,6 +233,24 @@
                                         button: document.getElementById('step1_submit')
                                     }
                                 };
+                                function sendEmail(email) {
+                                    // var xmlHttpRequest = new XMLHttpRequest(); 
+                                    // xmlHttpRequest.open(
+                                    //     'POST',
+                                    //     'https://api.mailerlite.com/api/v2/groups/8544776/subscribers',
+                                    //     true
+                                    // );
+                                    // xmlHttpRequest.setRequestHeader(
+                                    //     'Content-Type',
+                                    //     'application/json'
+                                    // );
+                                    // xmlHttpRequest.setRequestHeader(
+                                    //     'X-MailerLite-ApiKey',
+                                    //     ''
+                                    // );
+                                    // xmlHttpRequest.onreadystatechange = function () {};  
+                                    // xmlHttpRequest.send(JSON.stringify({ email: email }));
+                                }
                                 function validateStep1() {
                                     elements.step1.button.disabled = !(
                                         elements.step1.email.value &&
@@ -264,7 +287,7 @@
                                 form.addEventListener('submit', function (event) {
                                     event.preventDefault();
                                     if (currentStep === '1') {
-                                        alert('What should I do with this: ' + elements.step1.email.value);
+                                        sendEmail(elements.step1.email.value);
                                     }
                                     currentStep = String(Number(currentStep) + 1);
                                     setStep();
