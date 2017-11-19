@@ -234,22 +234,18 @@
                                     }
                                 };
                                 function sendEmail(email) {
-                                    // var xmlHttpRequest = new XMLHttpRequest(); 
-                                    // xmlHttpRequest.open(
-                                    //     'POST',
-                                    //     'https://api.mailerlite.com/api/v2/groups/8544776/subscribers',
-                                    //     true
-                                    // );
-                                    // xmlHttpRequest.setRequestHeader(
-                                    //     'Content-Type',
-                                    //     'application/json'
-                                    // );
-                                    // xmlHttpRequest.setRequestHeader(
-                                    //     'X-MailerLite-ApiKey',
-                                    //     ''
-                                    // );
-                                    // xmlHttpRequest.onreadystatechange = function () {};  
-                                    // xmlHttpRequest.send(JSON.stringify({ email: email }));
+                                    var xmlHttpRequest = new XMLHttpRequest(); 
+                                    xmlHttpRequest.open(
+                                        'POST',
+                                        'https://t5p6mjy7yd.execute-api.eu-west-1.amazonaws.com/prod/',
+                                        true
+                                    );
+                                    xmlHttpRequest.setRequestHeader(
+                                        'Content-Type',
+                                        'application/json'
+                                    );
+                                    xmlHttpRequest.onreadystatechange = function () {};  
+                                    xmlHttpRequest.send(JSON.stringify({ email: email }));
                                 }
                                 function validateStep1() {
                                     elements.step1.button.disabled = !(
